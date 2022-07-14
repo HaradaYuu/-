@@ -1,5 +1,5 @@
 #pragma once
-#undef UNICODE  // Unicode‚Å‚Í‚È‚­Aƒ}ƒ‹ƒ`ƒoƒCƒg•¶š‚ğg‚¤
+#undef UNICODE  // Unicodeã§ã¯ãªãã€ãƒãƒ«ãƒãƒã‚¤ãƒˆæ–‡å­—ã‚’ä½¿ã†
 #include<Windows.h>
 #include<d3d11.h>
 #include<dxgi.h>
@@ -9,51 +9,51 @@
 #define SIZEW    0.25f
 #define SIZEH    1.0f
 
-struct VERTEX2D   // VERTEX = ’¸“_
+struct VERTEX2D   // VERTEX = é ‚ç‚¹
 {
-	float x, y;  // ’¸“_‚ÌÀ•WiˆÊ’uj
-	float u, v;  // ƒeƒNƒXƒ`ƒƒ‚ÌUVÀ•W
+	float x, y;  // é ‚ç‚¹ã®åº§æ¨™ï¼ˆä½ç½®ï¼‰
+	float u, v;  // ãƒ†ã‚¯ã‚¹ãƒãƒ£ã®UVåº§æ¨™
 };
 
 class CTORNADO
 {
 private:
 	//============================================
-	// ƒƒ“ƒo•Ï”
+	// ã‚¦ãƒ³ãƒï¼Ÿï¼Ÿ
 	//============================================
-	wchar_t*                                m_tex;			//ƒeƒNƒXƒ`ƒƒ[‚Ì–¼‘O
-	ID3D11Device*							m_device;		//ƒfƒoƒCƒX‚Ìƒ|ƒCƒ“ƒ^
-	ID3D11DeviceContext*					m_context;		//ƒfƒoƒCƒXƒRƒ“ƒeƒLƒXƒg‚Ìƒ|ƒCƒ“ƒ^
-	ID3D11ShaderResourceView*				m_SRV;			//ƒVƒF[ƒ_[ƒŠƒ\[ƒX‚Ìƒ|ƒCƒ“ƒ^
+	wchar_t*                                m_tex;			//ãƒ†ã‚¯ã‚¹ãƒãƒ£ãƒ¼ã®åå‰
+	ID3D11Device*							m_device;		//ãƒ‡ãƒã‚¤ã‚¹ã®ãƒã‚¤ãƒ³ã‚¿
+	ID3D11DeviceContext*					m_context;		//ãƒ‡ãƒã‚¤ã‚¹ã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆã®ãƒã‚¤ãƒ³ã‚¿
+	ID3D11ShaderResourceView*				m_SRV;			//ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ãƒªã‚½ãƒ¼ã‚¹ã®ãƒã‚¤ãƒ³ã‚¿
 
-	ID3D11VertexShader*						m_VS;			//’¸“_ƒVƒF[ƒ_[‚Ìƒ|ƒCƒ“ƒ^
-	ID3D11PixelShader*						m_PS;			//ƒsƒNƒZƒ‹ƒVƒF[ƒ_[‚Ìƒ|ƒCƒ“ƒ^
-	ID3D11InputLayout*						m_InputLayout;	//ƒCƒ“ƒvƒbƒgƒŒƒCƒAƒEƒg‚Ìƒ|ƒCƒ“ƒ^
-	ID3D11Buffer*                           m_VB;			//’¸“_ƒoƒbƒtƒ@‚Ìƒ|ƒCƒ“ƒ^
-	ID3D11SamplerState*                     m_Sampler;		//ƒTƒ“ƒvƒ‰[‚Ìƒ|ƒCƒ“ƒ^
+	ID3D11VertexShader*						m_VS;			//é ‚ç‚¹ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ã®ãƒã‚¤ãƒ³ã‚¿
+	ID3D11PixelShader*						m_PS;			//ãƒ”ã‚¯ã‚»ãƒ«ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ã®ãƒã‚¤ãƒ³ã‚¿
+	ID3D11InputLayout*						m_InputLayout;	//ã‚¤ãƒ³ãƒ—ãƒƒãƒˆãƒ¬ã‚¤ã‚¢ã‚¦ãƒˆã®ãƒã‚¤ãƒ³ã‚¿
+	ID3D11Buffer*                           m_VB;			//é ‚ç‚¹ãƒãƒƒãƒ•ã‚¡ã®ãƒã‚¤ãƒ³ã‚¿
+	ID3D11SamplerState*                     m_Sampler;		//ã‚µãƒ³ãƒ—ãƒ©ãƒ¼ã®ãƒã‚¤ãƒ³ã‚¿
 	
-	float									m_PosX;			//‰æ‘œ‚Ì^‚ñ’†‚Ìƒ|ƒWƒVƒ‡ƒ“X
-	float									m_PosY;			//‰æ‘œ‚Ì^‚ñ’†‚Ìƒ|ƒWƒVƒ‡ƒ“Y
-	float									m_SizeW;		//‰æ‘œ‚ÌƒTƒCƒYW
-	float									m_SizeH;		//‰æ‘œ‚ÌƒTƒCƒYH
+	float									m_PosX;			//ç”»åƒã®çœŸã‚“ä¸­ã®ãƒã‚¸ã‚·ãƒ§ãƒ³X
+	float									m_PosY;			//ç”»åƒã®çœŸã‚“ä¸­ã®ãƒã‚¸ã‚·ãƒ§ãƒ³Y
+	float									m_SizeW;		//ç”»åƒã®ã‚µã‚¤ã‚ºW
+	float									m_SizeH;		//ç”»åƒã®ã‚µã‚¤ã‚ºH
 
 
 	//============================================
-	// ƒƒ“ƒoŠÖ”
+	// ãƒ¡ãƒ³ãƒé–¢æ•°
 	//============================================
 	BOOL LoadTex();
 
 public:
-	//ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+	//ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 	CTORNADO(wchar_t* _Tex ,ID3D11Device* _pDevice, ID3D11DeviceContext* _pDeviceContext, ID3D11ShaderResourceView* _pShaderResourceView,
 		ID3D11VertexShader* _pVS, ID3D11PixelShader* _pPS, ID3D11InputLayout* _pInputLayout, ID3D11Buffer* _pVB, ID3D11SamplerState* _pSampler);
 
-	//ƒ|ƒWƒVƒ‡ƒ“‚ÆƒTƒCƒY‚ğæ“¾‚·‚éŠÖ”
+	//ãƒã‚¸ã‚·ãƒ§ãƒ³ã¨ã‚µã‚¤ã‚ºã‚’å–å¾—ã™ã‚‹é–¢æ•°
 	void GetPosAndSize(float *_PosX,float *_PosY, float *SizeW,float* _SizeH);
-	//‰Šú‰»ˆ—@@–ˆê‰ñ‚¾‚¯Às‚µ‚Ä‚­‚¾‚³‚¢
+	//åˆæœŸåŒ–å‡¦ç†ã€€ã€€ï¼Šä¸€å›ã ã‘å®Ÿè¡Œã—ã¦ãã ã•ã„
 	void Init();
-	//XVˆ—
+	//æ›´æ–°å‡¦ç†
 	void Update();
-	//•`‰æˆ—
+	//æç”»å‡¦ç†
 	void Draw();
 };
